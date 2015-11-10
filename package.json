@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/terencegit/project-aadvark/issues"
   },
-  "homepage": "https://github.com/terencegit/project-aadvark#readme"
+  "homepage": "https://github.com/terencegit/project-aadvark#readme",
+  "dependencies": {
+    "dispatch": "^1.0.0"
+  }
 }

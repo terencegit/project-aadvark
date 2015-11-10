@@ -63,8 +63,17 @@ http.createServer(8081, function(request, response, next){
 //	folder within your apps directory.
 		
 		require('./express');
+
 //	This imports a module from a folder wihin your app
 
 We use the require function to export modules defined in other files into oue main file.
 //	This refers
+3.	Starting a node project.
+//	run this in the terminal within your app directory
+		npm init
+
+4.	Adding a module to your project using npm.
+//	Run thid in the terminal within your app directory
+		npm install --save <module_name>
+
 '''
