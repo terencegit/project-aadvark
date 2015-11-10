@@ -1,0 +1,23 @@
+{
+  "name": "project-aadvark",
+  "version": "1.0.0",
+  "description": "'This is a movie listings site'",
+  "main": "index.js",
+  "scripts": {
+    "test": "'Hello World'"
+  },
+  "keywords": [
+    "'Movie'",
+    "'imdb'"
+  ],
+  "author": "Terence Munene",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/terencegit/project-aadvark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/terencegit/project-aadvark/issues"
+  },
+  "homepage": "https://github.com/terencegit/project-aadvark#readme"
+}
