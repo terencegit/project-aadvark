@@ -5,23 +5,25 @@ var dispatch = require('dispatch');
 var server = http.createServer(
 	dispatch({
 		'/'	: function(request, response){
-			console.log('visiting %s' , request.url);
-			response.end('This is the root');
-		},
+			message = {
+				type: 'customer',
+				text: 'Hi, how are you'
+			};
 
-		'/movies' : function(request, response){
-			console.log('visiting %s', request.url);
-			response.end('This is the movies path');
-		},
+			response.writeHead(200, {
+				'content-type': 'application/json',
+				'Access-Control-Allow-Origin' : 'http://127.0.0.1:9000'
+			}),
 
-		'/actors' : function(request, response){
-			console.log('visiting %s', request.url);
-			response.end('This is the actors path');
+			response.end(JSON.stringify(message));
 		}
 
-	});
+	})
+
 	);	
 
 server.listen(8081, function(){
-	console.log('Server running on 127.0.0.1:8081');
+	console.log('server running on 127.0.0.1:8081');
+
 });
+
