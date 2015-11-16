@@ -162,7 +162,4 @@ Looking for Help
 -	Search engine e.g. Google, Bing etc
 
 
-Checkout this link <http://nosql-database.org/)> for a list of other data bases...
-
-
-# nb1_coding_challenge_test3
+Checkout this link <http://nosql-database.org/> for a list of other data bases...
