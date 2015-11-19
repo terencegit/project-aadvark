@@ -1,51 +1,74 @@
 var http = require('http');
 var dispatch = require('dispatch');
+var querystring = require('querystring');
 //include mongoose
 var mongoose = require ('mongoose');
 
-mongoose.connect('mongodb://localhost/terrific-tuesday');
+mongoose.connect('mongodb://localhost/project-aadvark');
 
-//create a schema
-var pizzaSchema = mongoose.Schema({
+var movieSchema = mongoose.Schema({
 	name: String,
-	price: Number,
-	created_at: {type: Date, default: Date.now()}
-});
-//compile our model
-
-var Pizza = mongoose.model('Pizza', pizzaSchema);
-
-//using the model
-
-var pizza = new Pizza({name: 'Vegeterian', price:1000});
-
-//create the document
-pizza.save(function(err, pizza){
-	if(err){
-	return console.error('Your pizza was not saved: ',pizza);
-	}
-	console.log('Your pizza was saved :)');
-});
+	category: Number
+})
+//Compile model
+var Movie = mongoose.model('Movie', movieSchema);
 
 var server = http.createServer(
 	dispatch({
-		'/'	: function(request, response){
-			message = {
-				type: 'customer',
-				text: 'Hi, how are you'
-			};
+		'/movies'	: {
+			'GET /' : function(request, response, next){
+						movies = [
+							{
+							title: 'Gone with wind',
+							category: ['Romance'],
+							main_actors: ['Mwangi','Nelson']
+							},
 
-			response.writeHead(200, {
-				'content-type': 'application/json',
-				'Access-Control-Allow-Origin' : 'http://127.0.0.1:9000'
-			}),
+							{
+							title: 'Sarafina',
+							category: ['Soap'],
+							main_actors: ['Safari','Jones']
+							},
 
-			response.end(JSON.stringify(message));
-		}
+							{
+							title: 'The Gods must be crazy',
+							category: ['Comedy'],
+							main_actors: ['Mwangi','Njoroge']
+							},
 
-	})
+							{
+							title: 'Rapture',
+							category: ['Action'],
+							main_actors: ['Pastor','Kanyari']
+							}
+						]
 
-	);	
+						response.end(JSON.stringify(movies));
+					   },
+
+					   'POST /':function (request, response){
+						   	//get parameters from the form
+							//create an instance of a movie
+							formData = '';
+							request.on('data', function(chunk){
+								formData = querystring.parse(chunk.toString())
+							});
+							
+							request.on('end', function(){
+								console.log(formData)
+								var movie = new Movie({
+									title: formData.title, 
+									category: formData.category, 
+									main_actors: formData.main_actors
+								});
+							//save the movie instance
+							//if successful save with the same movie instance
+				
+						});
+							
+			}
+		})
+	);
 
 server.listen(8081, function(){
 	console.log('server running on 127.0.0.1:8081');
