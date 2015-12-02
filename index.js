@@ -1,77 +1,65 @@
-var http = require('http');
-var dispatch = require('dispatch');
-var querystring = require('querystring');
+//express
+var express =require ('express');
+var app = express();
+//express middleware
+var bodyParser = require('body-parser');
+
 //include mongoose
 var mongoose = require ('mongoose');
 
 mongoose.connect('mongodb://localhost/project-aadvark');
 
 var movieSchema = mongoose.Schema({
-	name: String,
-	category: Number
+	title: String,
+	year_of_release: Number
 })
 //Compile model
 var Movie = mongoose.model('Movie', movieSchema);
 
-var server = http.createServer(
-	dispatch({
-		'/movies'	: {
-			'GET /' : function(request, response, next){
-						movies = [
-							{
-							title: 'Gone with wind',
-							category: ['Romance'],
-							main_actors: ['Mwangi','Nelson']
-							},
+app.use(bodyParser.urlencoded({extended: true}));
 
-							{
-							title: 'Sarafina',
-							category: ['Soap'],
-							main_actors: ['Safari','Jones']
-							},
-
-							{
-							title: 'The Gods must be crazy',
-							category: ['Comedy'],
-							main_actors: ['Mwangi','Njoroge']
-							},
-
-							{
-							title: 'Rapture',
-							category: ['Action'],
-							main_actors: ['Pastor','Kanyari']
-							}
-						]
-
-						response.end(JSON.stringify(movies));
-					   },
-
-					   'POST /':function (request, response){
-						   	//get parameters from the form
-							//create an instance of a movie
-							formData = '';
-							request.on('data', function(chunk){
-								formData = querystring.parse(chunk.toString())
-							});
-							
-							request.on('end', function(){
-								console.log(formData)
-								var movie = new Movie({
-									title: formData.title, 
-									category: formData.category, 
-									main_actors: formData.main_actors
-								});
-							//save the movie instance
-							//if successful save with the same movie instance
-				
-						});
-							
-			}
-		})
-	);
-
-server.listen(8081, function(){
-	console.log('server running on 127.0.0.1:8081');
+app.get('/movies', function (req, res) {
+	Movie.find(function(err, movies){
+   if (err){		
+		console.log(err);
+		} else {
+		res.json(movies);
+		}
+	});
 
 });
 
+app.post('/movies/new', function(req, res){
+	console.log(req.body);
+	formData = req.body;
+	var movie = new Movie(formData);
+	movie.save(function(err, movie) {
+			if (err){
+					console.log(err);
+			} else {
+				//console.log(formData);
+				console.log('Successfully saved the movie');
+				res.redirect('/movies');
+			}
+		});
+
+});
+
+app.get('/movies/:id', function(req, res) {
+	movieId = req.params.id;
+
+	Movie.findById(movieId, function (err, movie) {
+	if (err) return console.log(err);
+	
+	res.json(movie);
+
+	});
+	});
+
+	
+
+app.listen(8081, function(){
+	console.log('server running on 127.0.0.1:8081');
+
+}
+);
