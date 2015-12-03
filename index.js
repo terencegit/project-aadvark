@@ -22,7 +22,7 @@ var movieSchema = mongoose.Schema({
     //Compile model
 var Movie = mongoose.model('Movie', movieSchema);
 
-app.set('views' './views');
+app.set('views', './views');
 app.set('view engine', 'jade');
 
 //express middleware
@@ -31,74 +31,78 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/movies', function(req, res) {
-    Movie.find(function(err, movies) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(movies);
-        }
-    });
+            Movie.find()
+                .select('title year_of_release rating')
+                    .exec(function(err, movies) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                        res.render('index', {"movies": movies});
+                        //    res.json(movies);
+                        }
+                    }
 
-});
+                );
+            });
 
-app.post('/movies/new', function(req, res) {
-    console.log(req.body);
-    formData = req.body;
-    var movie = new Movie(formData);
-    movie.save(function(err, movie) {
-        if (err) {
-            console.log(err);
-        } else {
-            //console.log(formData);
-            console.log('Successfully saved the movie');
-            res.redirect('/movies');
-        }
-    });
-
-});
-
-app.get('/movies/:id', function(req, res) {
-    movieId = req.params.id;
-    
-    Movie.findById(movieId, function(err, movie) {
-        if (err) return console.log(err);
-
-        res.json(movie);
-    });
-});
-
-app.put('/movies/:id', function(req, res) {
-    movieId = req.params.id;
-    userRating = req.body.rating;
-
-    Movie.findById(movieId, function(err, movie) {
-        if (err) return console.log(err);
-
-        movie.rating = userRating;
-        movie.save(function(err, movie) {
-            if (err) return console.log(err);
-            res.json(movie);
+        app.post('/movies/new', function(req, res) {
+            console.log(req.body);
+            formData = req.body;
+            var movie = new Movie(formData);
+            movie.save(function(err, movie) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    //console.log(formData);
+                    console.log('Successfully saved the movie');
+                    res.redirect('/movies');
+                }
+            });
 
         });
 
-    });
-});
+        app.get('/movies/:id', function(req, res) {
+            movieId = req.params.id;
 
-app.delete('/movies/:id', function(req, res) {
-    movieId = req.params.id;
+            Movie.findById(movieId, function(err, movie) {
+                if (err) return console.log(err);
 
-    // retrieve the movie form mongod
-    Movie.remove({
-        _id: movieId
-    }, function(err) {
-        if (err) return console.log(err);
+                res.json(movie);
+            });
+        });
 
-        res.send('Movie was deleted');
+        app.put('/movies/:id', function(req, res) {
+            movieId = req.params.id;
+            userRating = req.body.rating;
 
-    });
-});
+            Movie.findById(movieId, function(err, movie) {
+                if (err) return console.log(err);
 
-app.listen(8081, function() {
-    console.log('server running on 127.0.0.1:8081');
+                movie.rating = userRating;
+                movie.save(function(err, movie) {
+                    if (err) return console.log(err);
+                    res.json(movie);
 
-});
+                });
+
+            });
+        });
+
+        app.delete('/movies/:id', function(req, res) {
+            movieId = req.params.id;
+
+            // retrieve the movie form mongod
+            Movie.remove({
+                _id: movieId
+            }, function(err) {
+                if (err) return console.log(err);
+
+                res.send('Movie was deleted');
+
+            });
+        });
+
+        app.listen(8081, function() {
+            console.log('server running on 127.0.0.1:8081');
+
+        });
