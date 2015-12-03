@@ -1,6 +1,9 @@
 //express
 var express = require('express');
+var cons = require('consolidate');
+
 var app = express();
+
 //express middleware
 var bodyParser = require('body-parser');
 
@@ -19,11 +22,14 @@ var movieSchema = mongoose.Schema({
             max: 10
         }
     })
-    //Compile model
+//Compile model
 var Movie = mongoose.model('Movie', movieSchema);
 
+// express settings
+app.engine('html', cons.liquid);
+
 app.set('views', './views');
-app.set('view engine', 'jade');
+app.set('view engine', 'html');
 
 //express middleware
 app.use(bodyParser.urlencoded({
