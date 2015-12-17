@@ -1,0 +1,418 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cookie",
+				"cookieParser(secret)	cookieParser.js"
+			],
+			[
+				"b",
+				"border	Attr"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"serv",
+				"serviceFee	payrollservice.js"
+			],
+			[
+				"allo",
+				"allowances	payrollservice.js"
+			],
+			[
+				"s",
+				"splice	basics.js"
+			],
+			[
+				"car",
+				"carModels	basics.js"
+			],
+			[
+				"w",
+				"water	basics.js"
+			],
+			[
+				"m",
+				"milk	basics.js"
+			],
+			[
+				"teal",
+				"tealeaves	basics.js"
+			],
+			[
+				"yea",
+				"year_of_manufacture	basics.js"
+			],
+			[
+				"pro",
+				"problemOne	basics.js"
+			],
+			[
+				"move",
+				"movies	index.js"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"t",
+				"title"
+			],
+			[
+				"for",
+				"formData"
+			],
+			[
+				"f",
+				"formData"
+			],
+			[
+				"mo",
+				"mongoose"
+			],
+			[
+				"pizza",
+				"Pizza"
+			],
+			[
+				"Piz",
+				"pizzaSchema"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"DA",
+				"dataHandler"
+			],
+			[
+				"c",
+				"controller"
+			],
+			[
+				"v",
+				"visiting"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"",
+				"BeautifyRuby"
+			],
+			[
+				"Html",
+				"Set Syntax: HTML"
+			],
+			[
+				"Emmet",
+				"Emmet: Reflect CSS Value"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"lin",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"git init",
+				"GitGutter: Compare Against Commit"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 576.0
+	},
+	"console":
+	{
+		"height": 656.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"clear",
+			"ls",
+			"git version",
+			"install git",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls",
+			"install git",
+			"git",
+			"git version",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/terencemunene1/Documents/projects/Demos/index.html",
+		"/Users/terencemunene1/Documents/classwork/javascript-revision/basics.js",
+		"/Users/terencemunene1/Documents/classwork/node_practice/server.js",
+		"/Users/terencemunene1/Desktop/index.html",
+		"/Users/terencemunene1/Desktop/testing.html",
+		"/Users/terencemunene1/Documents/plugins Store/less-less.js-51ae9c6/test/index.js",
+		"/Users/terencemunene1/Documents/projects/corel/facebook logo.cpt",
+		"/Users/terencemunene1/Documents/projects/website-templates/butterfly_2535/index.html",
+		"/Users/terencemunene1/Desktop/code correction/index.js",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/signup.html",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/views/signup.html",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/untitled",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/passport-local-express4/app.js",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/passport-local-express4/routes/movies.js",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/index.js",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/index.html",
+		"/Users/terencemunene1/Documents/projects/projectMovies/app/styles/main.css",
+		"/AssetDeliveryValues.properties",
+		"/Users/terencemunene1/Desktop/example.html",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/notes extra.md",
+		"/Users/terencemunene1/Documents/projects/project-aadvark/node_modules/.bin/jade",
+		"/Users/terencemunene1/Desktop/Class work/denno javascript revision.js",
+		"/Users/terencemunene1/Desktop/project-aadvark/index.html",
+		"/Users/terencemunene1/Desktop/MovieApp/Gruntfile.js",
+		"/Users/terencemunene1/Desktop/MovieStar/Gruntfile.js",
+		"/Users/terencemunene1/Documents/projects/terencegit.github.io/bootstrap-3.3.5-dist/js/appcontroller.js",
+		"/Users/terencemunene1/node_modules/express/index.js",
+		"/Users/terencemunene1/Documents/projects/jubilant_women/package.json",
+		"/Users/terencemunene1/Documents/the_dev_school/projects/jubilant_women/server.js",
+		"/Users/terencemunene1/Documents/the_dev_school/projects/my_app/index.js",
+		"/Library Terry/javascript basics.js",
+		"/Users/terencemunene1/Desktop/thedevschool/classwork/javascript-revision/basics.js",
+		"/Users/terencemunene1/Desktop/thedevschool/classwork/boostrap-excersize-master/main.css",
+		"/Users/terencemunene1/Desktop/thedevschool/classwork/boostrap-excersize-master/index.html",
+		"/Users/terencemunene1/Desktop/angular.min.js",
+		"/Users/terencemunene1/Desktop/terencegit.github.io/index.html",
+		"/Users/terencemunene1/Desktop/project-aadvark/readMe.md",
+		"/Users/terencemunene1/Desktop/node_practice/server.js",
+		"/Users/terencemunene1/Desktop/server.js",
+		"/Users/terencemunene1/Desktop/nodepractice.html",
+		"/Users/terencemunene1/Desktop/nb1-coding_challenge_test3/index.html",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/AutoCompleteJS/AutoCompleteJS.sublime-settings",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/Terminal (OSX).sublime-settings",
+		"/Users/terencemunene1/Downloads/Inconsolata-dz.otf.zip",
+		"/Users/terencemunene1/Downloads/GitGutter-master.zip",
+		"/terry.html",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/Users/terencemunene1/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/terencemunene1/Desktop/terencegit.github.io/bootstrap-3.3.5-dist/css/index.css",
+		"/Users/terencemunene1/Desktop/terencegit.github.io/appcontroller.js",
+		"/Users/terencemunene1/Desktop/ProposalKit/Pro_v12/OpenProposalKitPro.htm",
+		"/Users/terencemunene1/Desktop/terencegit.github.io/bootstrap-3.3.5-dist/js/angular.min.js"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ender('",
+			"('/",
+			"render(",
+			"mongoose",
+			"'/movies/:id/edit'",
+			"/movies/new",
+			"'/movies'",
+			"p",
+			"<li",
+			"<l",
+			"<li",
+			"2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 45.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project-aadvark.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jade",
+				"node_modules/.bin/jade"
+			],
+			[
+				"",
+				"index.js"
+			],
+			[
+				"packagec",
+				"Package Control Messages"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
