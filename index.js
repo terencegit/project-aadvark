@@ -18,7 +18,16 @@ var bodyParser = require('body-parser');
 
 //include mongoose
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/project-aadvark');
+var uristring = 
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URI ||
+    'mongodb://localhost/project-aadvark';
+
+mongoose.connect(uristring, function(err, res){
+	if (err) {
+		console.log('Error connecting to: ', uristring);
+	}
+});
 
 // var movieSchema = mongoose.Schema({
 //         title: String,
