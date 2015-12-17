@@ -65,5 +65,4 @@ passport.deserializeUser(User.deserializeUser());
 
 app.listen(app.get('port'), function() {
         console.log('server running on 127.0.0.1:%s',app.get('port'));
-
-    });
+});
